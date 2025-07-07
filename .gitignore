@@ -6,6 +6,8 @@ node_modules/
 .pnp.js
 .env
 .vscode
+google-passos.pdf
+
 
 # testing
 /coverage
