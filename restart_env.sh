@@ -9,3 +9,5 @@ rm yarn.lock
 
 # Reinstalar dependências
 yarn install
+
+ls -lrt node_modules/@prisma/
