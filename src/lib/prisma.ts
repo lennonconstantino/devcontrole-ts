@@ -1,4 +1,4 @@
-import { PrismaClient } from '../generated/client'
+import { PrismaClient } from '../generated/client'; //Esse import resolveu o problema do Prisma
 
 const globalForPrisma = global as unknown as { prisma: PrismaClient };
 
