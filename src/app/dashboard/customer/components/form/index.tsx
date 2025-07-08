@@ -36,6 +36,7 @@ export function NewCustomerForm({ userId }: { userId: string }) {
       userId: userId
     })
 
+    router.refresh(); // atualiza a pagina, as vezes o Next faz cache na pagina e nao atualiza o ultimo cadastro feito
     router.replace("/dashboard/customer")
 
   }
