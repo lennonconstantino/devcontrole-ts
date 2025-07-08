@@ -26,7 +26,7 @@ export async function DELETE(request: Request){
     }
   })
 
-  if(findTickets){ // barrar o usuario de deletar algum cliente com algum ticket aberto
+  if(findTickets){
     return NextResponse.json({ error: "Failed delete customer" }, { status: 400 })
   }
   
