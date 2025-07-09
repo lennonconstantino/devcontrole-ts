@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DevControle-TS
 
-## Getting Started
+DevControle-TS is a modern customer and ticket management system built with Next.js, TypeScript, and MongoDB. It enables businesses to efficiently manage their clients and support tickets with a clean, responsive interface and secure authentication.
 
-First, run the development server:
+The project was deployed to this endpoint
+https://devcontrole-ts.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Features
+
+- **User Authentication**: Google OAuth login via NextAuth.js
+- **Customer Management**: Register, list, and search customers
+- **Ticket System**: Create, list, and manage support tickets (open/close)
+- **Public Ticket Creation**: Allow customers to open tickets via email lookup
+- **Responsive UI**: Mobile-friendly, modern design with Tailwind CSS
+- **Form Validation**: Robust validation using React Hook Form, Zod, and Yup
+- **Protected Dashboard**: Only authenticated users can access management features
+
+---
+
+## 🏗️ Tech Stack
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Database**: [MongoDB](https://www.mongodb.com/) (via [Prisma ORM](https://www.prisma.io/))
+- **Authentication**: [NextAuth.js](https://next-auth.js.org/) with Google Provider
+- **UI**: [Tailwind CSS](https://tailwindcss.com/), [React Icons](https://react-icons.github.io/react-icons/)
+- **Forms**: [React Hook Form](https://react-hook-form.com/), [Zod](https://zod.dev/), [Yup](https://github.com/jquense/yup)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router (pages, API routes)
+│   ├── api/               # REST API endpoints
+│   ├── dashboard/         # Authenticated dashboard
+│   ├── open/              # Public ticket creation
+│   └── layout.tsx         # Root layout
+├── components/            # Reusable UI components
+├── lib/                   # Utility libraries (auth, API, Prisma)
+├── providers/             # React context providers
+├── utils/                 # Type definitions
+└── generated/             # Prisma generated client
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone the repository
+```bash
+git clone <repo-url>
+cd devcontrole-ts
+```
 
-## Learn More
+### 2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 3. Configure environment variables
+Create a `.env` file in the root with the following:
+```
+DATABASE_URL=<your-mongodb-connection-string>
+GOOGLE_CLIENT_ID=<your-google-client-id>
+GOOGLE_CLIENT_SECRET=<your-google-client-secret>
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 4. Generate Prisma client
+```bash
+npx prisma generate
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 5. Run the development server
+```bash
+npm run dev
+```
 
-## Deploy on Vercel
+Visit [http://localhost:3000](http://localhost:3000) to view the app.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🗃️ Database Schema (Prisma)
+- **User**: Authentication and user management
+- **Customer**: Client information
+- **Ticket**: Support tickets
+- **Account, Session, VerificationToken**: NextAuth.js integration
+
+---
+
+## 📚 Scripts
+- `npm run dev` – Start development server
+- `npm run build` – Build for production
+- `npm run start` – Start production server
+- `npm run lint` – Lint code
+
+---
+
+## 📝 License
+This project is licensed under the MIT License.
+
+---
+
+## 🙏 Acknowledgements
+- [Next.js](https://nextjs.org/)
+- [Prisma](https://www.prisma.io/)
+- [NextAuth.js](https://next-auth.js.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/)
+- [SujeitoProgramador](https://sujeitoprogramador.com)
