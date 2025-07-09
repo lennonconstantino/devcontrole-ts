@@ -30,7 +30,8 @@ export function FormTicket({ customer }: FormTicketProps) {
     })
 
 
-    console.log(response.data);
+    setValue("name", "")
+    setValue("description", "")
   }
 
 
